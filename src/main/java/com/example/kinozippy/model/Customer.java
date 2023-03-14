@@ -21,8 +21,7 @@ public class Customer {
 
   private String email;
 
-  @OneToMany(mappedBy = "Customer")
-  @JsonBackReference
+  @OneToMany(mappedBy = "ticketId")
   private Set<Ticket> ticket = new HashSet<>();
 
   public Customer() {

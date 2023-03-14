@@ -1,18 +1,34 @@
 package com.example.kinozippy.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "seat")
 public class Seat {
 
-    private char row;
+    @Id
+    @Column(name = "seatid")
+    private int seatId;
+    private int row;
+    private int column;
+    private boolean isReserved;
 
-    private int seatNumber;
 
-
-    public Seat(char row, int seatNumber) {
+    public Seat(int row, int column) {
         this.row = row;
-        this.seatNumber = seatNumber;
+        this.column = column;
+        this.isReserved = false;
     }
 
-    public char getRow() {
+    public Seat() {
+
+    }
+
+    public Seat(int seatId) {
+        this.seatId = seatId;
+    }
+
+    public int getRow() {
         return row;
     }
 
@@ -20,11 +36,24 @@ public class Seat {
         this.row = row;
     }
 
-    public int getSeatNumber() {
-        return seatNumber;
+    public int getColumn() {
+        return column;
     }
 
-    public void setSeatNumber(int seatNumber) {
-        this.seatNumber = seatNumber;
+    public void setColumn(int coloumn) {
+        this.column = coloumn;
+    }
+
+    public boolean isReserved() {
+        return isReserved;
+    }
+
+    public void setReserved(boolean reserved) {
+        isReserved = reserved;
+    }
+
+    @Override
+    public String toString() {
+        return "column " + getColumn() +" row "+ getRow();
     }
 }

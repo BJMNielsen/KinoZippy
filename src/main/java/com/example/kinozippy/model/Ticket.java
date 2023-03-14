@@ -11,7 +11,7 @@ public class Ticket {
   private int seatValue;
 
   @ManyToOne
-  @JoinColumn(name = "")
+  @JoinColumn(name = "title",referencedColumnName = "title")
   private Movie movie;
 
   public Ticket() {

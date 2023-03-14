@@ -15,19 +15,15 @@ public class Movie {
   private double rating;
   private double length;
   private String genre;
-  private double showTime;
-  private String movieTheater;
   private int ageLimit;
 
 
-  public Movie(String title, Date releaseDate, double rating, double length, String genre, double showTime, String movieTheater, int ageLimit) {
+  public Movie(String title, Date releaseDate, double rating, double length, String genre, int ageLimit) {
     this.title = title;
     this.releaseDate = releaseDate;
     this.rating = rating;
     this.length = length;
     this.genre = genre;
-    this.showTime = showTime;
-    this.movieTheater = movieTheater;
     this.ageLimit = ageLimit;
   }
 
@@ -73,22 +69,6 @@ public class Movie {
 
   public void setGenre(String genre) {
     this.genre = genre;
-  }
-
-  public double getShowTime() {
-    return showTime;
-  }
-
-  public void setShowTime(double showTime) {
-    this.showTime = showTime;
-  }
-
-  public String getMovieTheater() {
-    return movieTheater;
-  }
-
-  public void setMovieTheater(String movieTheater) {
-    this.movieTheater = movieTheater;
   }
 
   public int getAgeLimit() {
