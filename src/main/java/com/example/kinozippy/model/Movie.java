@@ -1,13 +1,15 @@
 package com.example.kinozippy.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import java.util.Date;
 
+
+@Entity
 public class Movie {
 
   @Id
-  private int movieId;
   private String title;
   private Date releaseDate;
   private double rating;
@@ -16,6 +18,22 @@ public class Movie {
   private double showTime;
   private String movieTheater;
   private int ageLimit;
+
+
+  public Movie(String title, Date releaseDate, double rating, double length, String genre, double showTime, String movieTheater, int ageLimit) {
+    this.title = title;
+    this.releaseDate = releaseDate;
+    this.rating = rating;
+    this.length = length;
+    this.genre = genre;
+    this.showTime = showTime;
+    this.movieTheater = movieTheater;
+    this.ageLimit = ageLimit;
+  }
+
+  public Movie() {
+
+  }
 
   public String getTitle() {
     return title;
