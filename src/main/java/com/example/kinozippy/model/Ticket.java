@@ -9,6 +9,9 @@ public class Ticket {
   @Id
   private int ticketId;
   private int seatValue;
+  @ManyToOne
+  @JoinColumn(name = "title",referencedColumnName = "title")
+  private Showing showing;
 
   public Ticket(int ticketId, int seatValue, Showing showing) {
     this.ticketId = ticketId;
@@ -24,9 +27,7 @@ public class Ticket {
     this.showing = showing;
   }
 
-  @ManyToOne
-  @JoinColumn(name = "title",referencedColumnName = "title")
-  private Showing showing;
+
 
   public Ticket() {
   }
