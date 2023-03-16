@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj ny movie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Insert movie</h1>
+<div>
+    <form action="http://localhost:8080/movie" method="post" id="formMovie">
+        <div>
+            <label for="inpCode">Kode</label>
+            <input
+                    type="text"
+                    name="kode"
+                    class="inputfield"
+                    placeholder="eks. 7080"
+                    id="inpCode"
+            >
+        </div>
+        <div>
+            <label for="inpNavn">Navn</label>
+            <input
+                    type="text"
+                    name="navn"
+                    class="inputfield"
+                    placeholder="eks. Roskilde"
+                    id="inpNavn"
+            >
+        </div>
+        <div>
+            <label for="inpRegion">Region</label>
+            <select id="ddRegioner"></select>
+        </div>
+        <button type="submit" title="Gem" id="submit">Opret</button>
+    </form>
+</div>
+<script src="js/fetchmovies.js"></script>
+<script src="js/formmovie.js"></script>
+</body>
+</html>

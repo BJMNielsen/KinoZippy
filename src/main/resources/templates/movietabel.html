@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fin tabel med movies</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Movies</h1>
+<button id="pbFetchMovies">Hent movies</button>
+<select id="ddMovies"></select>
+<button id="pbCreateTable">Byg tabel</button>
+<br>
+<br>
+<div>
+  <table class="table" id="tblMovie">
+    <tr style="color:white; background-color: black">
+      <th>Title</th>
+      <th>Release Date</th>
+      <th>Rating</th>
+      <th>Length</th>
+      <th>Genre</th>
+      <th>Age Limit</th>
+      <th>Photo Href</th>
+      <th>Billede</th>
+      
+    </tr>
+  </table>
+</div>
+
+<script src="js/fetchmovieslocal.js"></script>
+<script src="js/createtable.js"></script>
+
+</body>
+</html>
