@@ -10,9 +10,23 @@ public class Ticket {
   private int ticketId;
   private int seatValue;
 
+  public Ticket(int ticketId, int seatValue, Showing showing) {
+    this.ticketId = ticketId;
+    this.seatValue = seatValue;
+    this.showing = showing;
+  }
+
+  public Showing getShowing() {
+    return showing;
+  }
+
+  public void setShowing(Showing showing) {
+    this.showing = showing;
+  }
+
   @ManyToOne
   @JoinColumn(name = "title",referencedColumnName = "title")
-  private Movie movie;
+  private Showing showing;
 
   public Ticket() {
   }
@@ -34,11 +48,4 @@ public class Ticket {
     this.seatValue = seatValue;
   }
 
-  public Movie getMovie() {
-    return movie;
-  }
-
-  public void setMovie(Movie movie) {
-    this.movie = movie;
-  }
 }
