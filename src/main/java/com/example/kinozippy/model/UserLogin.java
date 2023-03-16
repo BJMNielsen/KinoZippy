@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class UserLogin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class User {
 
     private String password;
 
-    public User(int id, String username, String password) {
+    public UserLogin(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
